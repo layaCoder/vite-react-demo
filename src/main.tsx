@@ -5,11 +5,13 @@ import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import products from './mockData/products'
 import productsReducer from './store/products';
+import cartReducer from './store/cart'
 import './index.css'
 
 
 const rootReducer = combineReducers({
-  products: productsReducer
+  products: productsReducer,
+  cart:cartReducer
 });
 
 const store = createStore(
