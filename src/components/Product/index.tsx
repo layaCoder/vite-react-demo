@@ -1,14 +1,24 @@
 
 const Index = (props) => {
-    const {name, price, currency, image, isInCart} = props
+    const { name, price, currency, image, isInCart } = props
 
-    const  handleClick = () => {
-        const { id, addToCart, removeFromCart } = props;
-        if (isInCart) {
-            removeFromCart(id);
-        } else {
-            addToCart(id);
-        }
+    const handleClick = () => {
+        const { id, addToCart } = props;
+        // if (isInCart) {
+        //     removeFromCart(id);
+        // } else {
+        addToCart(id);
+        // }
+    }
+
+    const handleDecrease = () => {
+        const { id, decreaseFromCart } = props
+        decreaseFromCart(id)
+    }
+
+    const handleRemove = () => {
+        const { id, removeFromCart } = props
+        removeFromCart(id)
     }
 
     return (
@@ -21,12 +31,24 @@ const Index = (props) => {
                     <button
                         onClick={handleClick}
                     >
-                        {isInCart ? 'Remove' : 'Add to cart'}
+                        Add to cart
+                    </button>
+                    <button
+                        onClick={handleDecrease}
+                        disabled={!isInCart}
+                    >
+                        Decrease in cart
+                    </button>
+                    <button
+                        onClick={handleRemove}
+                        disabled={!isInCart}
+                    >
+                        Remove
                     </button>
                 </div>
             </div>
         </div>
     );
 }
- 
+
 export default Index;

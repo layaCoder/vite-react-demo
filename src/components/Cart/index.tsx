@@ -1,6 +1,7 @@
 import CartItem from '../CartItem';
 
 const Cart = ({ items, total, currency, removeFromCart }) => {
+    console.log(items,'<====items',4)
     return (
         <div>
             <h3>Shopping Cart</h3>
