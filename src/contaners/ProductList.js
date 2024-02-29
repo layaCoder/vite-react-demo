@@ -13,9 +13,9 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-   
+
     fetchProducts: () => {
-            dispatch(fetchProductsAsync())
+        dispatch(fetchProductsAsync())
     }
 })
 

@@ -2,6 +2,7 @@
 import ProductList from './contaners/ProductList'
 import Cart from './contaners/Cart'
 import { useState } from 'react'
+import { Button, Modal } from 'antd'; 
 
 
 import './App.css'
@@ -9,24 +10,24 @@ import './App.css'
 function App() {
   const [showCart, setShowCart] = useState(false)
 
-
   return (
     <div className="container">
       <div className="row">
         <h1>React+Redux Shopping Cart Example</h1>
       </div>
-      <button
+      <Button
         onClick={() => {
           setShowCart(!showCart)
         }}
       >toggle cart
-      </button>
-      <div className="row">
-        {showCart && <Cart />}
-      </div>
+      </Button>
+      
       <div className="row" >
         <ProductList />
       </div>
+      <Modal title="Basic Modal" open={showCart} onCancel={()=>{setShowCart(false)}} footer={null}>
+      <Cart />
+      </Modal>
 
       <footer>
         <small>
