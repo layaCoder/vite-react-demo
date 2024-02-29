@@ -15,13 +15,15 @@ function App() {
       <div className="row">
         <h1>React+Redux Shopping Cart Example</h1>
       </div>
-      <Button
-        onClick={() => {
-          setShowCart(!showCart)
-        }}
-      >toggle cart
-      </Button>
-
+      <div className='cart_btn'>
+        <Button
+          type='primary'
+          onClick={() => {
+            setShowCart(!showCart)
+          }}
+        >Open Cart
+        </Button>
+      </div>
       <div className="row" >
         <ProductList />
       </div>

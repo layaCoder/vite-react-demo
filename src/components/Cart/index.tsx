@@ -4,8 +4,6 @@ const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromC
     { items: Store.Product[], total: number, currency: string, removeFromCart: (id: number) => void, addToCart: (id: number) => void, decreaseFromCart: (id: number) => void, itemCount: number }) => {
     return (
         <div>
-            <h3>Shopping Cart</h3>
-
             <div className="cart">
                 <div className="panel panel-default">
                     <div className="panel-body">

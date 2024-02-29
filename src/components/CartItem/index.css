@@ -1,0 +1,11 @@
+.cart-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+
+}
+
+.cart-item__name {
+    margin-right: 20px;
+}
