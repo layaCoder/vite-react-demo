@@ -1,73 +1,73 @@
 const data: Store.Product[] = [
   {
     id: 1,
-    name: '西瓜',
+    name: 'Watermelon',
     price: 32,
     currency: 'CNY',
-    image: 'https://layablog.top/images/202311/e49b7e29-886f-4aa6-84e0-e518586c56a5.png',
-    video: 'https://layablog.top/images/Titanfall.mp4'
+    image: 'https://layablog.top/images/watermelon.jpg',
+  video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 2,
-    name: '薯条',
+    name: 'Chips',
     price: 12,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20234/c22c8054-67f0-4773-a138-1d0130c3229b.png',
+    image: 'https://layablog.top/images/chips.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 3,
-    name: '泡芙',
+    name: 'Popover',
     price: 15.6,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20207/87eed710-1276-46f2-8ef8-4d2606526ad2.jpg',
+    image: 'https://layablog.top/images/pov.png',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 4,
-    name: '可乐',
+    name: 'Coke',
     price: 3,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20215/202b76ba-c8df-41d8-a87b-7e2a5a90dcb0-copy.jpg',
+    image: 'https://layablog.top/images/coke.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 5,
-    name: '披萨',
+    name: 'Pizza',
     price: 23.9,
     currency: 'CNY',
-    image: 'https://layablog.top/images/202012/0e7aeb97-aa2c-4690-80eb-0d1f714f8aae-copy.jpg',
+    image: 'https://layablog.top/images/pizza.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 6,
-    name: '咖啡',
+    name: 'Coffee',
     price: 9.9,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20214/5b35d86e-58bf-4134-a688-c0bf2473d895-copy.jpg',
+    image: 'https://layablog.top/images/coffee.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 7,
-    name: '汉堡',
+    name: '',
     price: 15.6,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20207/87eed710-1276-46f2-8ef8-4d2606526ad2.jpg',
+    image: 'https://layablog.top/images/hamgerber.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   }, {
     id: 8,
-    name: '冰淇淋',
+    name: 'Ice Cream',
     price: 15.6,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20207/87eed710-1276-46f2-8ef8-4d2606526ad2.jpg',
+    image: 'https://layablog.top/images/iceCream.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   },
   {
     id: 9,
-    name: '牛奶',
+    name: 'Milk',
     price: 15.6,
     currency: 'CNY',
-    image: 'https://layablog.top/images/20207/87eed710-1276-46f2-8ef8-4d2606526ad2.jpg',
+    image: 'https://layablog.top/images/milk.jpg',
     video: 'https://layablog.top/images/Titanfall.mp4'
   }
 ];

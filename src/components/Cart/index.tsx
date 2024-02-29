@@ -1,4 +1,5 @@
 import CartItem from '../../contaners/CartItem';
+import './index.css'
 
 const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromCart, itemCount }:
     { items: Store.Product[], total: number, currency: string, removeFromCart: (id: number) => void, addToCart: (id: number) => void, decreaseFromCart: (id: number) => void, itemCount: number }) => {

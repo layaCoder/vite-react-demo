@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <h1>React+Redux Shopping Cart Example</h1>
+        <h1>React+Redux Shopping Cart Demo</h1>
       </div>
       <div className='cart_btn'>
         <Button
@@ -31,11 +31,11 @@ function App() {
         <Cart />
       </Modal>
 
-      <footer>
+      {/* <footer>
         <small>
           react redux cart demo
         </small>
-      </footer>
+      </footer> */}
     </div>
   )
 }
