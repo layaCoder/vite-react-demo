@@ -1,4 +1,5 @@
-const CartItem = ({ id,name, price, currency, removeFromCart, addToCart, decreaseFromCart ,itemCount}) => {
+const CartItem = ({ id,name, price, currency, removeFromCart, addToCart, decreaseFromCart ,itemCount}:
+    {id:number,name:string,price:number,currency:string,removeFromCart:(id:number)=>void,addToCart:(id:number)=>void,decreaseFromCart:(id:number)=>void,itemCount:number}) => {
     return (
         <div className="cart-item">
             <div>
