@@ -25,7 +25,7 @@ function App() {
       <div className="row" >
         <ProductList />
       </div>
-      <Modal title="Basic Modal" open={showCart} onCancel={() => { setShowCart(false) }} footer={null}>
+      <Modal title="Shopping Cart" open={showCart} onCancel={() => { setShowCart(false) }} footer={null}>
         <Cart />
       </Modal>
 

@@ -4,7 +4,7 @@ import './index.css'
 
 
 const Index = (props) => {
-    const { name, price, currency, image, isInCart, video } = props
+    const { name, price, currency, image, isInCart, video ,itemCount} = props
     const [showDetail, setShowDetail] = useState(false)
 
 
@@ -31,6 +31,7 @@ const Index = (props) => {
             <h3>{name}</h3>
             <div className="product__price">{price} {currency}</div>
             <div className="product__button-wrap">
+                <div>count: {itemCount}</div>
                 <button
                     onClick={handleClick}
                 >

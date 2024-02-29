@@ -2,7 +2,7 @@ import Product from '../../contaners/Product'
 import { useEffect } from 'react'
 
 
-const Index = ({ products ,fetchProducts}: { products: Products.Item[] ,fetchProducts:()=>void}) => {
+const Index = ({ products ,fetchProducts}: { products: Store.Product[] ,fetchProducts:()=>void}) => {
 
 
 
@@ -46,7 +46,8 @@ const Index = ({ products ,fetchProducts}: { products: Products.Item[] ,fetchPro
     <div>
       <h3>Products</h3>
       {products.map(product => (
-        <div className="product-list__item">
+        // 实际项目中 key = product.id 是唯一值，此项目未demo，加载的数据是mock数据，加 + 0-1 随机数确保 key 唯一
+        <div key={product.id+Math.random()} className="product-list__item">
           <Product {...product} />
         </div>
       ))}

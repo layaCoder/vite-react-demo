@@ -7,10 +7,10 @@ const SET_PRODUCTS = 'SET_PRODUCTS';
 
 // reducer
 
-const initialState = [] as Products.Item[]
+const initialState = [] as Store.Product[]
 
 
-export default function products(state = initialState, action = {}) {
+export default function products(state = initialState, action = {} as { payload: any, type: string }) {
 
     switch (action.type) {
         case SET_PRODUCTS:
@@ -22,26 +22,27 @@ export default function products(state = initialState, action = {}) {
 
 
 
-function handleSetProducts(state, props) {
+function handleSetProducts(state: Store.Product[], props: { products: Store.Product[] }) {
     const newList = [...state].concat(props.products)
     return newList
 }
 
 
 // get data from api
-export function fetchProductsAsync (){
-    function foo(dispatch,getState){
+export function fetchProductsAsync() {
+    function fetchWithMidware(dispatch: (callback) => void, getState) {
         // 模拟api 返回请求数据
-        setTimeout(()=>{
-            dispatch(setProducts(mockData))
-        ,500})
+        setTimeout(() => {
+            dispatch(setProducts(mockData)),
+                500
+        })
     }
-    return foo
+    return fetchWithMidware
 }
 
 
 // action creators
-export function setProducts(products) {
+export function setProducts(products: Store.Product[]) {
     return {
         type: SET_PRODUCTS,
         payload: {
@@ -50,21 +51,13 @@ export function setProducts(products) {
     }
 }
 
-// export default function products(state = []) {
-//     console.log(state,29)
-//     return state;
-// }
 
 
 // selectors
-export function getProducts(state: { products: Products.Item[] }) {
+export function getProducts(state: { products: Store.Product[] }) {
     return state.products;
 }
 
-export function getProduct(state, props) {
+export function getProduct(state: Store.Data, props:{id:number}) {
     return state.products.find(item => item.id === props.id);
-}
-
-export function getProductAsync(state, props) {
-    return state.products
 }

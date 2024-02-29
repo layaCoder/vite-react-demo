@@ -1,7 +1,6 @@
-import CartItem from '../CartItem';
+import CartItem from '../../contaners/CartItem';
 
-const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromCart }) => {
-    console.log(items, '<====items', 4)
+const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromCart,itemCount }) => {
     return (
         <div>
             <h3>Shopping Cart</h3>
@@ -12,7 +11,7 @@ const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromC
                         {items.length > 0 && (
                             <div className="cart__body">
                                 {items.map(item => (
-                                    <CartItem key={item.id} {...item} onClick={() => removeFromCart(item.id)} add={()=>{addToCart(item.id)}} decrease={()=>{decreaseFromCart(item.id)}} />
+                                    <CartItem key={item.id} {...item} itemCount={itemCount} onClick={() => removeFromCart(item.id)} add={()=>{addToCart(item.id)}} decrease={()=>{decreaseFromCart(item.id)}} />
                                 ))}
                             </div>
                         )}

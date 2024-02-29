@@ -11,7 +11,7 @@ const initialState = {
     currency: 'CNY'
 };
 
-export default function cart(state = initialState, action = {}) {
+export default function cart(state = initialState, action = {} as { payload: { productId: number }, type: string }) {
 
     switch (action.type) {
         case CART_ADD:
@@ -27,7 +27,7 @@ export default function cart(state = initialState, action = {}) {
 }
 
 
-function handleCartAdd(state, payload) {
+function handleCartAdd(state: Store.Cart, payload: { productId: number }) {
     const isInCart = state.items.find(it => it.id === payload.productId) !== undefined
     let newItems = [...state.items]
     if (isInCart) {
@@ -46,7 +46,7 @@ function handleCartAdd(state, payload) {
     };
 }
 
-function handleCartDecrease(state, payload) {
+function handleCartDecrease(state: Store.Cart, payload: { productId: number }) {
     const itemInCard = state.items.find(it => it.id === payload.productId)
     let newItems = [...state.items]
     if (itemInCard?.id && itemInCard?.count > 1) {
@@ -65,7 +65,7 @@ function handleCartDecrease(state, payload) {
     };
 }
 
-function handleCartRemove(state, payload) {
+function handleCartRemove(state: Store.Cart, payload: { productId: number }) {
     return {
         ...state,
         items: state.items.filter(it => it.id !== payload.productId)
@@ -73,7 +73,7 @@ function handleCartRemove(state, payload) {
 }
 
 // action creators
-export function addToCart(productId) {
+export function addToCart(productId: number) {
     return {
         type: CART_ADD,
         payload: {
@@ -82,7 +82,7 @@ export function addToCart(productId) {
     }
 }
 
-export function removeFromCart(productId) {
+export function removeFromCart(productId: number) {
     return {
         type: CART_REMOVE,
         payload: {
@@ -91,7 +91,7 @@ export function removeFromCart(productId) {
     }
 }
 
-export function decreaseFromCart(productId) {
+export function decreaseFromCart(productId: number) {
     return {
         type: CART_DECREASE,
         payload: {
@@ -101,25 +101,31 @@ export function decreaseFromCart(productId) {
 }
 
 // selectors
-export function isInCart(state, props) {
+export function isInCart(state: Store.Data, props: Store.Product) {
     // get ids arry form obj array
-    
+
     const prodcutIdsInState = Array.from(state.cart.items, ({ id }) => id);
     return prodcutIdsInState.indexOf(props.id) !== -1;
 }
 
-export function getItems(state, props) {
+export function getItems(state: Store.Data) {
     const prodcutIdsInState = Array.from(state.cart.items, ({ id }) => id);
     return prodcutIdsInState.map(id => getProduct(state, { id }));
 }
 
-export function getCurrency(state, props) {
+export function getCurrency(state: Store.Data) {
     return state.cart.currency;
 }
 
-export function getTotal(state, props) {
+export function getTotal(state: Store.Data) {
     return state.cart.items.reduce((acc, it) => {
         const item = getProduct(state, { id: it.id });
-        return acc + item.price * it.count;
+        return acc + (item?.price || 0) * it.count;
     }, 0);
 }
+
+export function getItemCountInCart(state: Store.Data, props: Store.Product) {
+    return state.cart.items.find((it: { id: number; }) => it.id === props.id)?.count || 0
+}
+
+
