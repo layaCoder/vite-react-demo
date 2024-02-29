@@ -1,11 +1,22 @@
 import { connect } from 'react-redux';
 import ProductList from '../components/ProductList'
-import { getProducts } from "../store/products";
+import {
+    getProducts,
+    // setProducts,
+    fetchProductsAsync
+} from "../store/products";
 
-const mapStateToProps = (state,props)=>{
+const mapStateToProps = (state, props) => {
     return {
-        products:getProducts(state,props)
+        products: getProducts(state, props)
     }
 }
 
-export default connect(mapStateToProps)(ProductList)
+const mapDispatchToProps = (dispatch) => ({
+   
+    fetchProducts: () => {
+            dispatch(fetchProductsAsync())
+    }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList)

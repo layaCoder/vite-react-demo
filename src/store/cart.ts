@@ -12,13 +12,11 @@ const initialState = {
 };
 
 export default function cart(state = initialState, action = {}) {
-    console.log(state, 15)
 
     switch (action.type) {
         case CART_ADD:
             return handleCartAdd(state, action.payload);
         case CART_REMOVE:
-            console.log('remove running')
             return handleCartRemove(state, action.payload);
 
         case CART_DECREASE:
