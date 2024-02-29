@@ -1,7 +1,7 @@
 import CartItem from '../../contaners/CartItem';
 import './index.css'
 
-const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromCart, itemCount }:
+const Cart = ({ items, total, currency }:
     { items: Store.Product[], total: number, currency: string, removeFromCart: (id: number) => void, addToCart: (id: number) => void, decreaseFromCart: (id: number) => void, itemCount: number }) => {
     return (
         <div>
@@ -11,7 +11,7 @@ const Cart = ({ items, total, currency, removeFromCart, addToCart, decreaseFromC
                         {items.length > 0 && (
                             <div className="cart__body">
                                 {items.map(item => (
-                                    <CartItem key={item.id} {...item} itemCount={itemCount} onClick={() => removeFromCart(item.id)} add={() => { addToCart(item.id) }} decrease={() => { decreaseFromCart(item.id) }} />
+                                    <CartItem key={item.id} {...item} />
                                 ))}
                             </div>
                         )}

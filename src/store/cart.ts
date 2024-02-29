@@ -8,7 +8,7 @@ const CART_REMOVE = 'CART_REMOVE';
 // reducer
 const initialState = {
     items: [], //  product  array
-    currency: 'CNY'
+    currency: '￥'
 };
 
 export default function cart(state = initialState, action = {} as { payload: { productId: number }, type: string }) {
