@@ -1,14 +1,12 @@
+import './index.css'
+
 
 const Index = (props) => {
     const { name, price, currency, image, isInCart } = props
 
     const handleClick = () => {
         const { id, addToCart } = props;
-        // if (isInCart) {
-        //     removeFromCart(id);
-        // } else {
         addToCart(id);
-        // }
     }
 
     const handleDecrease = () => {
@@ -23,7 +21,7 @@ const Index = (props) => {
 
     return (
         <div >
-            <img src={image} alt="product" />
+            <img src={image} alt="product" className="product_image"/>
             <div className="caption">
                 <h3>{name}</h3>
                 <div className="product__price">{price} {currency}</div>

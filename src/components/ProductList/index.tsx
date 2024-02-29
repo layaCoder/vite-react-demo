@@ -46,9 +46,9 @@ const Index = ({ products ,fetchProducts}: { products: Products.Item[] ,fetchPro
     <div>
       <h3>Products</h3>
       {products.map(product => (
-        <li className="product-list__item">
+        <div className="product-list__item">
           <Product {...product} />
-        </li>
+        </div>
       ))}
     </div>
   );

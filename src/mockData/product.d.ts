@@ -5,5 +5,6 @@ export interface Item{
   price: number;
   currency: string;
   image: string;
+  video: string;
 }
 }

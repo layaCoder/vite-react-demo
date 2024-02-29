@@ -2,7 +2,7 @@
 import ProductList from './contaners/ProductList'
 import Cart from './contaners/Cart'
 import { useState } from 'react'
-import { Button, Modal } from 'antd'; 
+import { Button, Modal } from 'antd';
 
 
 import './App.css'
@@ -21,12 +21,12 @@ function App() {
         }}
       >toggle cart
       </Button>
-      
+
       <div className="row" >
         <ProductList />
       </div>
-      <Modal title="Basic Modal" open={showCart} onCancel={()=>{setShowCart(false)}} footer={null}>
-      <Cart />
+      <Modal title="Basic Modal" open={showCart} onCancel={() => { setShowCart(false) }} footer={null}>
+        <Cart />
       </Modal>
 
       <footer>

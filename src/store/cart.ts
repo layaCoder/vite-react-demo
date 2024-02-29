@@ -103,6 +103,7 @@ export function decreaseFromCart(productId) {
 // selectors
 export function isInCart(state, props) {
     // get ids arry form obj array
+    
     const prodcutIdsInState = Array.from(state.cart.items, ({ id }) => id);
     return prodcutIdsInState.indexOf(props.id) !== -1;
 }
