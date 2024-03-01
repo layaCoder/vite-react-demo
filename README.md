@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+# React + Redux Shopping Cart Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 使用Vite构建项目
+- Redux管理项目数据流
+- redux-tunk 处理异步action
+- antd用作UI组件
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+P.S. : 
+- infinity list 采用监听浏览器scroll事件实现。( 此项目为demo项目，实际项目中，会根据分页逻辑，加载下一页数据，并且添加state来判断是否在请求中，避免scroll时间触发多次加载。
+要实现无限加载，可在最后无数据时将pageIndex重置为1，从第1页开始重新走分页加载逻辑 )
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- 项目图片与视频资源来自自建阿里云ECS服务器，仅仅作为功能测试，固所有商品共用同一视频资源

@@ -49,7 +49,7 @@ const data: Store.Product[] = [
   },
   {
     id: 7,
-    name: '',
+    name: 'Hamgerber',
     price: 15.6,
     currency: '￥',
     image: 'https://layablog.top/images/hamgerber.jpg',
