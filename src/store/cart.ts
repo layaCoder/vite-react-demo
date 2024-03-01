@@ -129,3 +129,7 @@ export function getItemCountInCart(state: Store.Data, props: Store.Product) {
 }
 
 
+export function getItemsInCart(state:Store.Data){
+    return state.cart.items
+}
+

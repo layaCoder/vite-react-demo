@@ -1,4 +1,13 @@
-.cart__total{
+.cart_pay_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+
+.cart__total {
     font-weight: bold;
     font-size: 18px;
 }
