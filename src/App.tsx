@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <h1>React+Redux Shopping Cart Demo</h1>
-        <h2>github : <a href="https://github.com/layaCoder/vite-react-demo">https://github.com/layaCoder/vite-react-demo</a></h2>
+        <h1 className='page_title'>React+Redux Shopping Cart Demo</h1>
+        <h2 className='page_desc'>github : <a href="https://github.com/layaCoder/vite-react-demo">https://github.com/layaCoder/vite-react-demo</a></h2>
       </div>
       <div className='cart_btn'>
         <Button

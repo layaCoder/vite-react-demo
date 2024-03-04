@@ -1,4 +1,5 @@
 import Product from '../../contaners/Product'
+import './index.css'
 import { useEffect } from 'react'
 
 
@@ -43,7 +44,7 @@ const Index = ({ products, fetchProducts }: { products: Store.Product[], fetchPr
 
 
   return (
-    <div>
+    <div className='p_list_wrapper'>
       {products.map(product => (
         // 实际项目中 key = product.id 是唯一值，此项目未demo，加载的数据是mock数据，加 + 0-1 随机数确保 key 唯一
         <div key={product.id + Math.random()} className="product-list__item">

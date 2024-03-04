@@ -33,7 +33,7 @@ const Index = (props) => {
                     {showDetailBtn && <button onClick={() => {
                         setShowDetail(true)
                     }}>
-                        Show detail
+                        Detail
                     </button>}
                 </div>
                 <div className="product__price">Price: {price} {currency}</div>
