@@ -25,7 +25,7 @@ const Index = (props) => {
 
 
     const renderProductView = (showDetailBtn: boolean) => {
-        return <div className='content_wrppper'>
+        return  <div className='content_wrppper'>
             {/* <img src={image} alt="product" className="product_image"/> */}
             <div className="caption">
                 <div className='name_wrapper'>
@@ -62,6 +62,7 @@ const Index = (props) => {
         </div >
     }
 
+    if(!name) return <div/>
     return (
         <div className='product_container'>
             <img src={image} alt="product" className="product_image" />
