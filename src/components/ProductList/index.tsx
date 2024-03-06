@@ -1,4 +1,4 @@
-import Product from '../../contaners/Product'
+import Product from '../../containers/Product'
 import './index.css'
 import { useEffect } from 'react'
 

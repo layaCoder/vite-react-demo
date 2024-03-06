@@ -1,6 +1,6 @@
 
-import ProductList from './contaners/ProductList'
-import Cart from './contaners/Cart'
+import ProductList from './containers/ProductList'
+import Cart from './containers/Cart'
 import { useState } from 'react'
 import { Button, Modal } from 'antd';
 

@@ -1,4 +1,4 @@
-import CartItem from '../../contaners/CartItem';
+import CartItem from '../../containers/CartItem';
 import { Button, Alert } from 'antd';
 import { useState } from 'react';
 import './index.css'
