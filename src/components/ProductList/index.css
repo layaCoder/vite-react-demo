@@ -4,3 +4,9 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+
+.footer {
+    height: 100px;
+    width: 50px;
+    justify-content: flex-end;
+}
